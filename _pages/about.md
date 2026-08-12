@@ -11,6 +11,10 @@ I'm a 4th year Ph.D. student at [Kim Jaechul Graduate School of AI, KAIST](https
 
 My research interests lie in generative models, with a particular focus on robotics and world models.
 
+Publications
+======
+{% for post in site.publications reversed %}{% include archive-single-publication.html %}{% endfor %}
+
 Education
 ======
 * **Ph.D. Student in Artificial Intelligence**, Sep. 2021 – Present<br>
