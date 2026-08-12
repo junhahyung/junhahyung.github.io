@@ -7,74 +7,155 @@ redirect_from:
   - /about.html
 ---
 
-<section class="card">
-  <div class="intro">
-    <div class="intro__text">
-      <h1 class="intro__name">Junha Hyung</h1>
-      <p class="intro__meta">Kim Jaechul Graduate School of AI, KAIST &nbsp;·&nbsp; Ph.D. Candidate</p>
+<div class="hero">
+  <div class="hero-info">
+    <div class="hero-name">Junha Hyung</div>
+    <div class="hero-affiliation">Kim Jaechul Graduate School of AI, KAIST &nbsp;·&nbsp; Ph.D. Candidate</div>
 
-      <nav class="pills">
-        <a class="pill" href="mailto:sharpeeee@kaist.ac.kr">Email</a>
-        <a class="pill" href="https://github.com/junhahyung">GitHub</a>
-        <a class="pill" href="https://scholar.google.com/citations?user=DsaV5aQAAAAJ&amp;hl=en">Google Scholar</a>
-        <a class="pill" href="{{ '/cv/' | relative_url }}">CV</a>
-      </nav>
-
-      <p class="intro__bio">
-        I'm a 4th year Ph.D. student at
-        <a href="https://gsai.kaist.ac.kr/">Kim Jaechul Graduate School of AI, KAIST</a>,
-        advised by professor <a href="https://sites.google.com/site/jaegulchoo/">Jaegul Choo</a>.
-        My research interests lie in generative models, with a particular focus on
-        <strong>robotics and world models</strong>.
-      </p>
+    <div class="hero-links">
+      <a class="hero-link" href="mailto:sharpeeee@kaist.ac.kr"><svg class="ico"><use href="#i-envelope"></use></svg> Email</a>
+      <a class="hero-link" href="https://github.com/junhahyung"><svg class="ico"><use href="#i-github"></use></svg> GitHub</a>
+      <a class="hero-link" href="https://scholar.google.com/citations?user=DsaV5aQAAAAJ&amp;hl=en"><svg class="ico"><use href="#i-google-scholar"></use></svg> Google Scholar</a>
+      <a class="hero-link" href="{{ '/cv/' | relative_url }}"><svg class="ico"><use href="#i-file-lines"></use></svg> CV</a>
+      <a class="hero-link" href="{{ '/files/junha_hyung_cv.pdf' | relative_url }}"><svg class="ico"><use href="#i-file-pdf"></use></svg> CV (PDF)</a>
     </div>
 
-    <img class="intro__avatar" src="{{ '/images/profile.png' | relative_url }}" alt="Junha Hyung">
+    <div class="hero-bio">
+      I'm a 4th year Ph.D. student at
+      <a href="https://gsai.kaist.ac.kr/">Kim Jaechul Graduate School of AI, KAIST</a>,
+      advised by professor <a href="https://sites.google.com/site/jaegulchoo/">Jaegul Choo</a>.
+      My research interests lie in generative models, with a particular focus on
+      <strong>robotics and world models</strong>.
+    </div>
   </div>
-</section>
 
-<section class="card">
-  <h2 class="card__title">Publications</h2>
+  <div class="profile-image">
+    <img src="{{ '/images/profile.png' | relative_url }}" alt="Junha Hyung">
+  </div>
+</div>
+
+<div class="section">
+  <h2 class="section-title"><svg class="ico"><use href="#i-book"></use></svg> Publications</h2>
 
   {% assign pubs = site.publications | sort: 'date' | reverse %}
   {% assign shown_year = '' %}
   {% for post in pubs %}
     {% assign year = post.date | date: "%Y" %}
     {% if year != shown_year %}
-      <div class="year">{{ year }}</div>
+      <div class="year-label">{{ year }}</div>
       {% assign shown_year = year %}
     {% endif %}
     {% include pub-entry.html %}
   {% endfor %}
-</section>
+</div>
 
-<section class="card prose">
-  <h2 class="card__title">Experience</h2>
+<div class="section">
+  <h2 class="section-title"><svg class="ico"><use href="#i-graduation-cap"></use></svg> Education</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-icon"><svg class="ico"><use href="#i-university"></use></svg></div>
+      <div class="timeline-content">
+        <div class="timeline-org">KAIST AI</div>
+        <div class="timeline-detail">Ph.D. in Artificial Intelligence &nbsp;·&nbsp; Sep. 2021 – Present<br>Advisor: <a href="https://sites.google.com/site/jaegulchoo/">Jaegul Choo</a></div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-icon"><svg class="ico"><use href="#i-university"></use></svg></div>
+      <div class="timeline-content">
+        <div class="timeline-org">KAIST</div>
+        <div class="timeline-detail">B.S. in Computer Science, Electrical Engineering (Double Major) &nbsp;·&nbsp; Mar. 2016 – Aug. 2021</div>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <h3>Professional</h3>
-  <ul>
-    <li><strong>Microsoft Research</strong>, Game Intelligence Team — AI Research Intern, Jun. 2025 – Sep. 2025</li>
-    <li><strong>NVIDIA</strong>, Digital Human Team — AI Research Intern, Jun. 2024 – Dec. 2024</li>
-    <li><strong>Naver Cloud</strong>, Neural 3D Team — AI Research Intern, Feb. 2024 – Jun. 2024</li>
-    <li><strong>Kakao Enterprise</strong>, Vision Intelligence Team — AI Research Intern, Jul. 2022 – Dec. 2022</li>
-    <li><strong>Mindslab</strong> — AI Research Intern, Mar. 2021 – Aug. 2021</li>
-    <li><strong>SKT</strong> — AI Fellowship, Jun. 2019 – Jun. 2020</li>
-    <li><strong>Kakao</strong>, Recommendation Systems Team — AI Research Intern, Sep. 2018 – Feb. 2019</li>
-  </ul>
+<div class="section">
+  <h2 class="section-title"><svg class="ico"><use href="#i-briefcase"></use></svg> Work Experience</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-icon"><svg class="ico"><use href="#i-microsoft"></use></svg></div>
+      <div class="timeline-content">
+        <div class="timeline-org">Microsoft Research</div>
+        <div class="timeline-detail">AI Research Intern, Game Intelligence Team &nbsp;·&nbsp; Jun. 2025 – Sep. 2025</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-icon"><svg><use href="#i-nvidia"></use></svg></div>
+      <div class="timeline-content">
+        <div class="timeline-org">NVIDIA</div>
+        <div class="timeline-detail">AI Research Intern, Digital Human Team &nbsp;·&nbsp; Jun. 2024 – Dec. 2024</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-icon"><svg><use href="#i-naver"></use></svg></div>
+      <div class="timeline-content">
+        <div class="timeline-org">Naver Cloud</div>
+        <div class="timeline-detail">AI Research Intern, Neural 3D Team &nbsp;·&nbsp; Feb. 2024 – Jun. 2024</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-icon"><svg><use href="#i-kakao"></use></svg></div>
+      <div class="timeline-content">
+        <div class="timeline-org">Kakao Enterprise</div>
+        <div class="timeline-detail">AI Research Intern, Vision Intelligence Team &nbsp;·&nbsp; Jul. 2022 – Dec. 2022</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-icon"><svg class="ico"><use href="#i-flask"></use></svg></div>
+      <div class="timeline-content">
+        <div class="timeline-org">Mindslab</div>
+        <div class="timeline-detail">AI Research Intern &nbsp;·&nbsp; Mar. 2021 – Aug. 2021</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-icon"><svg class="ico"><use href="#i-tower-cell"></use></svg></div>
+      <div class="timeline-content">
+        <div class="timeline-org">SK Telecom</div>
+        <div class="timeline-detail">AI Fellowship &nbsp;·&nbsp; Jun. 2019 – Jun. 2020</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-icon"><svg><use href="#i-kakao"></use></svg></div>
+      <div class="timeline-content">
+        <div class="timeline-org">Kakao</div>
+        <div class="timeline-detail">AI Research Intern, Recommendation Systems Team &nbsp;·&nbsp; Sep. 2018 – Feb. 2019</div>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <h3>Education</h3>
-  <ul>
-    <li><strong>Ph.D. in Artificial Intelligence</strong>, KAIST, Sep. 2021 – present — Advisor: Prof. Jaegul Choo</li>
-    <li><strong>B.S. in School of Computing, Electrical Engineering (Double Major)</strong>, KAIST, Mar. 2016 – Aug. 2021</li>
-  </ul>
+<div class="section">
+  <h2 class="section-title"><svg class="ico"><use href="#i-trophy"></use></svg> Awards &amp; Honors</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-icon"><svg class="ico"><use href="#i-cloud"></use></svg></div>
+      <div class="timeline-content">
+        <div class="timeline-org">Google Cloud Award</div>
+        <div class="timeline-detail">Google, 2023 &nbsp;·&nbsp; GCP Research Grant</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-icon"><svg><use href="#i-kakao"></use></svg></div>
+      <div class="timeline-content">
+        <div class="timeline-org">Kakao Research Grant</div>
+        <div class="timeline-detail">Kakao, 2023</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-icon"><svg class="ico"><use href="#i-medal"></use></svg></div>
+      <div class="timeline-content">
+        <div class="timeline-org">Qualcomm-KAIST Kaggle 1st Prize</div>
+        <div class="timeline-detail">Qualcomm, 2020 &nbsp;·&nbsp; Multimodal Emotion Recognition</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-icon"><svg class="ico"><use href="#i-university"></use></svg></div>
+      <div class="timeline-content">
+        <div class="timeline-org">Dean's List</div>
+        <div class="timeline-detail">KAIST, 2019</div>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <h3>Awards &amp; Honors</h3>
-  <ul>
-    <li><strong>Google Cloud Award</strong>, Google, 2023 — GCP Research Grant</li>
-    <li><strong>Kakao Research Grant</strong>, Kakao, 2023</li>
-    <li><strong>Qualcomm-KAIST Kaggle 1st Prize</strong>, Qualcomm, 2020</li>
-    <li><strong>KAIST Dean's List</strong>, KAIST, 2019</li>
-  </ul>
-</section>
-
-<p class="footer">sharpeeee [at] kaist.ac.kr</p>
+<p class="page-footer">sharpeeee [at] kaist.ac.kr</p>

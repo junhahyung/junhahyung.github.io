@@ -7,6 +7,12 @@ redirect_from:
   - /resume
 ---
 
+<p class="cv-download">
+  <a class="pub-link" href="{{ '/files/junha_hyung_cv.pdf' | relative_url }}">
+    <svg class="ico"><use href="#i-file-pdf"></use></svg> Download PDF
+  </a>
+</p>
+
 Education
 ======
 * **Ph.D. in Artificial Intelligence**, Sep. 2021 – present<br>

@@ -2,20 +2,18 @@
 layout: onepage
 ---
 
-<section class="card">
-  <h1 class="pub-detail__title">{{ page.title }}</h1>
-  {% if page.authors %}<p class="pub__authors">{{ page.authors }}</p>{% endif %}
-  <p class="pub__venue">{{ page.venue }}{% unless page.venue == 'arXiv preprint' or page.venue == 'Under Review' %}, {{ page.date | date: "%Y" }}{% endunless %}</p>
+<div class="section">
+  <div class="pub-detail-title">{{ page.title }}</div>
+  {% if page.authors %}<div class="pub-authors">{{ page.authors }}</div>{% endif %}
+  <div class="pub-venue">{{ page.venue }}{% unless page.venue == 'arXiv preprint' or page.venue == 'Under Review' %}, {{ page.date | date: "%Y" }}{% endunless %}</div>
 
   {% if page.links %}
-    <p class="pub__links">
-      {% for link in page.links %}<a class="pub__link" href="{{ link.url }}">{{ link.name }}</a>{% endfor %}
-    </p>
+    <div class="pub-links">
+      {% for link in page.links %}<a class="pub-link" href="{{ link.url }}">{{ link.name }}</a>{% endfor %}
+    </div>
   {% endif %}
 
-  <div class="pub-detail__body prose">
-    {{ content }}
-  </div>
-</section>
+  <div class="pub-detail-body">{{ content }}</div>
+</div>
 
 <p class="backlink"><a href="{{ '/' | relative_url }}">&larr; Back to home</a></p>

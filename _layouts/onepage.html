@@ -21,16 +21,18 @@
   </head>
 
   <body>
-    <main class="wrap">
+    {% include icons.html %}
+
+    <div class="container">
       {% if page.card %}
-        <section class="card card--prose">
-          {% if page.title %}<h2 class="card__title">{{ page.title }}</h2>{% endif %}
+        <div class="section prose">
+          {% if page.title %}<h2 class="section-title"><svg class="ico"><use href="#i-file-lines"></use></svg> {{ page.title }}</h2>{% endif %}
           {{ content }}
-        </section>
+        </div>
         <p class="backlink"><a href="{{ '/' | relative_url }}">&larr; Back to home</a></p>
       {% else %}
         {{ content }}
       {% endif %}
-    </main>
+    </div>
   </body>
 </html>
