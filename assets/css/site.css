@@ -45,7 +45,7 @@ img, video { max-width: 100%; }
   padding: 48px 52px;
   box-shadow: var(--shadow);
   display: flex;
-  gap: 48px;
+  gap: 36px;
   align-items: flex-start;
   margin-bottom: 20px;
 }
@@ -70,7 +70,7 @@ img, video { max-width: 100%; }
 .hero-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
   margin-bottom: 24px;
 }
 
@@ -78,10 +78,11 @@ img, video { max-width: 100%; }
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 14px;
+  padding: 6px 12px;
   border-radius: 8px;
   font-size: .82rem;
   font-weight: 500;
+  white-space: nowrap;
   text-decoration: none;
   color: var(--text-muted);
   border: 1px solid var(--border);
