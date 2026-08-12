@@ -398,3 +398,9 @@ img, video { max-width: 100%; }
 
 .hero-link .ico { width: 13px; height: 13px; }
 .cv-download .ico { width: 13px; height: 13px; }
+
+/* Brand marks have very different ink coverage inside their 24x24 box, so
+   they need per-mark optical sizing to look the same weight as the FA icons. */
+.timeline-icon .ico--naver  { width: 11px; height: 11px; }
+.timeline-icon .ico--nvidia { width: 16px; height: 16px; }
+.timeline-icon .ico--kakao  { width: 17px; height: 17px; }
