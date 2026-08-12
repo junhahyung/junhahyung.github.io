@@ -1,0 +1,26 @@
+<article class="pub">
+  {% if post.video or post.header.teaser %}
+    <div class="pub__media">
+      <a href="{{ post.url | relative_url }}">
+        {% if post.video %}
+          <video autoplay loop muted playsinline poster="{{ post.header.teaser | prepend: '/images/' | relative_url }}">
+            <source src="{{ post.video | relative_url }}" type="video/mp4">
+          </video>
+        {% else %}
+          <img src="{{ post.header.teaser | prepend: '/images/' | relative_url }}" alt="">
+        {% endif %}
+      </a>
+    </div>
+  {% endif %}
+
+  <div class="pub__body">
+    <h3 class="pub__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    {% if post.authors %}<p class="pub__authors">{{ post.authors }}</p>{% endif %}
+    <p class="pub__venue">{{ post.venue }}{% unless post.venue == 'arXiv preprint' or post.venue == 'Under Review' %}, {{ post.date | date: "%Y" }}{% endunless %}</p>
+    {% if post.links %}
+      <p class="pub__links">
+        {% for link in post.links %}<a class="pub__link" href="{{ link.url }}">{{ link.name }}</a>{% endfor %}
+      </p>
+    {% endif %}
+  </div>
+</article>

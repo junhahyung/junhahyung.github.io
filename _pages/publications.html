@@ -1,16 +1,25 @@
 ---
-layout: archive
+layout: onepage
 title: "Publications"
 permalink: /publications/
-author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap pub__intro">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+<section class="card">
+  <h2 class="card__title">Publications</h2>
+  <p style="margin:0 0 .5rem;color:var(--ink-soft);font-size:.9rem">
+    Also on <a href="{{ site.author.googlescholar }}">Google Scholar</a>.
+  </p>
 
-{% include base_path %}
+  {% assign pubs = site.publications | sort: 'date' | reverse %}
+  {% assign shown_year = '' %}
+  {% for post in pubs %}
+    {% assign year = post.date | date: "%Y" %}
+    {% if year != shown_year %}
+      <div class="year">{{ year }}</div>
+      {% assign shown_year = year %}
+    {% endif %}
+    {% include pub-entry.html %}
+  {% endfor %}
+</section>
 
-{% for post in site.publications reversed %}
-  {% include archive-single-publication.html %}
-{% endfor %}
+<p class="backlink"><a href="{{ '/' | relative_url }}">&larr; Back to home</a></p>

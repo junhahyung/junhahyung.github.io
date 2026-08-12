@@ -1,0 +1,80 @@
+---
+layout: onepage
+title: "Junha Hyung"
+permalink: /
+redirect_from:
+  - /about/
+  - /about.html
+---
+
+<section class="card">
+  <div class="intro">
+    <div class="intro__text">
+      <h1 class="intro__name">Junha Hyung</h1>
+      <p class="intro__meta">Kim Jaechul Graduate School of AI, KAIST &nbsp;·&nbsp; Ph.D. Candidate</p>
+
+      <nav class="pills">
+        <a class="pill" href="mailto:sharpeeee@kaist.ac.kr">Email</a>
+        <a class="pill" href="https://github.com/junhahyung">GitHub</a>
+        <a class="pill" href="https://scholar.google.com/citations?user=DsaV5aQAAAAJ&amp;hl=en">Google Scholar</a>
+        <a class="pill" href="{{ '/cv/' | relative_url }}">CV</a>
+      </nav>
+
+      <p class="intro__bio">
+        I'm a 4th year Ph.D. student at
+        <a href="https://gsai.kaist.ac.kr/">Kim Jaechul Graduate School of AI, KAIST</a>,
+        advised by professor <a href="https://sites.google.com/site/jaegulchoo/">Jaegul Choo</a>.
+        My research interests lie in generative models, with a particular focus on
+        <strong>robotics and world models</strong>.
+      </p>
+    </div>
+
+    <img class="intro__avatar" src="{{ '/images/profile.png' | relative_url }}" alt="Junha Hyung">
+  </div>
+</section>
+
+<section class="card">
+  <h2 class="card__title">Publications</h2>
+
+  {% assign pubs = site.publications | sort: 'date' | reverse %}
+  {% assign shown_year = '' %}
+  {% for post in pubs %}
+    {% assign year = post.date | date: "%Y" %}
+    {% if year != shown_year %}
+      <div class="year">{{ year }}</div>
+      {% assign shown_year = year %}
+    {% endif %}
+    {% include pub-entry.html %}
+  {% endfor %}
+</section>
+
+<section class="card prose">
+  <h2 class="card__title">Experience</h2>
+
+  <h3>Professional</h3>
+  <ul>
+    <li><strong>Microsoft Research</strong>, Game Intelligence Team — AI Research Intern, Jun. 2025 – Sep. 2025</li>
+    <li><strong>NVIDIA</strong>, Digital Human Team — AI Research Intern, Jun. 2024 – Dec. 2024</li>
+    <li><strong>Naver Cloud</strong>, Neural 3D Team — AI Research Intern, Feb. 2024 – Jun. 2024</li>
+    <li><strong>Kakao Enterprise</strong>, Vision Intelligence Team — AI Research Intern, Jul. 2022 – Dec. 2022</li>
+    <li><strong>Mindslab</strong> — AI Research Intern, Mar. 2021 – Aug. 2021</li>
+    <li><strong>SKT</strong> — AI Fellowship, Jun. 2019 – Jun. 2020</li>
+    <li><strong>Kakao</strong>, Recommendation Systems Team — AI Research Intern, Sep. 2018 – Feb. 2019</li>
+  </ul>
+
+  <h3>Education</h3>
+  <ul>
+    <li><strong>Ph.D. in Artificial Intelligence</strong>, KAIST, Sep. 2021 – present — Advisor: Prof. Jaegul Choo</li>
+    <li><strong>B.S. in School of Computing, Electrical Engineering (Double Major)</strong>, KAIST, Mar. 2016 – Aug. 2021</li>
+  </ul>
+
+  <h3>Awards &amp; Honors</h3>
+  <ul>
+    <li><strong>Google Cloud Award</strong>, Google, 2023 — GCP Research Grant</li>
+    <li><strong>Kakao Research Grant</strong>, Kakao, 2023</li>
+    <li><strong>Qualcomm-KAIST Kaggle 1st Prize</strong>, Qualcomm, 2020</li>
+    <li><strong>KAIST Dean's List</strong>, KAIST, 2019</li>
+  </ul>
+</section>
+
+<p class="footer">sharpeeee [at] kaist.ac.kr</p>

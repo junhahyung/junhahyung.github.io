@@ -1,0 +1,325 @@
+/* ==========================================================================
+   Junha Hyung — personal site
+   Single-column card layout, light theme.
+   ========================================================================== */
+
+:root {
+  --bg: #eef1f6;
+  --card: #ffffff;
+  --ink: #111827;
+  --ink-soft: #4b5563;
+  --ink-mute: #6b7280;
+  --rule: #e5e7eb;
+  --accent: #2563eb;
+  --accent-soft: #dbe4fb;
+  --radius: 16px;
+  --shadow: 0 1px 2px rgba(16, 24, 40, .04), 0 8px 24px rgba(16, 24, 40, .06);
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  padding: 2.5rem 1.25rem 4rem;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover { text-decoration: underline; }
+
+img, video { max-width: 100%; }
+
+.wrap {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------- cards -- */
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2.75rem 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.card__title {
+  margin: 0 0 1.25rem;
+  padding-bottom: .9rem;
+  border-bottom: 1px solid var(--rule);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -.01em;
+}
+
+/* --------------------------------------------------------------- intro -- */
+
+.intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.intro__text { flex: 1 1 auto; min-width: 0; }
+
+.intro__name {
+  margin: 0 0 .35rem;
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -.03em;
+  line-height: 1.15;
+}
+
+.intro__meta {
+  margin: 0 0 1.25rem;
+  color: var(--ink-mute);
+  font-size: .95rem;
+}
+
+.intro__bio {
+  margin: 1.25rem 0 0;
+  color: var(--ink-soft);
+  font-size: .98rem;
+  line-height: 1.75;
+}
+
+.intro__bio strong { color: var(--ink); font-weight: 600; }
+
+.intro__avatar {
+  flex: 0 0 auto;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 16px rgba(16, 24, 40, .12);
+}
+
+/* --------------------------------------------------------------- pills -- */
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.pill {
+  display: inline-block;
+  padding: .45rem 1.1rem;
+  border: 1px solid #d8dee9;
+  border-radius: 999px;
+  color: var(--ink-soft);
+  font-size: .9rem;
+  line-height: 1.4;
+  transition: border-color .15s, color .15s, background-color .15s;
+}
+
+.pill:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: #f7f9ff;
+  text-decoration: none;
+}
+
+/* -------------------------------------------------------- publications -- */
+
+.year {
+  margin: 1.75rem 0 1rem;
+  padding-bottom: .4rem;
+  border-bottom: 1px solid var(--rule);
+  color: var(--accent);
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+}
+
+.year:first-of-type { margin-top: 0; }
+
+.pub {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.4rem;
+  padding: 1.15rem 0;
+  border-bottom: 1px solid #f1f3f7;
+}
+
+.pub:last-child { border-bottom: 0; padding-bottom: 0; }
+
+.pub__media { flex: 0 0 190px; }
+
+.pub__media img,
+.pub__media video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid var(--rule);
+}
+
+.pub__body { flex: 1 1 auto; min-width: 0; }
+
+.pub__title {
+  margin: 0 0 .3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: -.005em;
+}
+
+.pub__title a { color: var(--ink); }
+.pub__title a:hover { color: var(--accent); }
+
+.pub__authors {
+  margin: 0 0 .3rem;
+  color: var(--ink-soft);
+  font-size: .875rem;
+  line-height: 1.6;
+}
+
+/* author lists mark the site owner with <u> */
+.pub__authors u {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.pub__venue {
+  margin: 0 0 .55rem;
+  color: var(--ink-mute);
+  font-size: .85rem;
+  font-style: italic;
+}
+
+.pub__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin: 0;
+}
+
+.pub__link {
+  display: inline-block;
+  padding: .25rem .8rem;
+  border: 1px solid var(--accent-soft);
+  border-radius: 999px;
+  color: var(--accent);
+  font-size: .8rem;
+  line-height: 1.5;
+  transition: background-color .15s;
+}
+
+.pub__link:hover { background: #f2f6ff; text-decoration: none; }
+
+/* ---------------------------------------------------------------- prose -- */
+
+.prose h3 {
+  margin: 1.75rem 0 .6rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.prose h3:first-child { margin-top: 0; }
+
+.prose ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--ink-soft);
+  font-size: .92rem;
+}
+
+.prose li { margin-bottom: .45rem; }
+
+.prose li strong { color: var(--ink); font-weight: 600; }
+
+.prose p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: .92rem;
+}
+
+.card--prose h1,
+.card--prose h2:not(.card__title) {
+  margin: 2rem 0 .75rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid var(--rule);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.card--prose ul { padding-left: 1.1rem; color: var(--ink-soft); font-size: .92rem; }
+.card--prose li { margin-bottom: .4rem; }
+.card--prose li strong,
+.card--prose p strong { color: var(--ink); font-weight: 600; }
+.card--prose p { color: var(--ink-soft); font-size: .92rem; }
+.card--prose u { text-decoration: none; font-weight: 600; color: var(--accent); }
+
+.backlink {
+  margin: 0;
+  text-align: center;
+  font-size: .875rem;
+}
+
+.footer {
+  margin: 2rem 0 0;
+  text-align: center;
+  color: var(--ink-mute);
+  font-size: .8rem;
+}
+
+/* --------------------------------------------------------------- small -- */
+
+@media (max-width: 700px) {
+  body { padding: 1.25rem .75rem 2.5rem; }
+
+  .card { padding: 1.75rem 1.5rem; }
+
+  .intro {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .intro__name { font-size: 1.9rem; }
+
+  .intro__avatar { width: 96px; height: 96px; }
+
+  .pub {
+    flex-direction: column;
+    gap: .85rem;
+  }
+
+  .pub__media { flex: none; width: 100%; }
+}
+
+.pub-detail__title {
+  margin: 0 0 .5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -.015em;
+}
+
+.pub-detail__body { margin-top: 1.5rem; }
+
+.pub-detail__body video,
+.pub-detail__body img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid var(--rule);
+}
+
+.pub-detail__body p { margin-top: 1rem; }
