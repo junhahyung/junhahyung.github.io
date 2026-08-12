@@ -3,7 +3,7 @@ title: "Generative Failure-to-Success Bridging for Robot Learning"
 collection: publications
 category: manuscripts
 permalink: /publication/failure-to-success
-date: 2026-11-01
+date: 2026-12-01
 venue: 'Under Review'
 authors: '<u>Junha Hyung</u>*, Hyojin Jang*, Jaegul Choo (* equal contribution)'
 video: /images/papers/f2s.mp4

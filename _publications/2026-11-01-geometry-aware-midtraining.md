@@ -3,7 +3,7 @@ title: "Geometry-Aware Mid-Training for World-Action Models"
 collection: publications
 category: manuscripts
 permalink: /publication/geometry-aware-midtraining
-date: 2026-12-01
+date: 2026-11-01
 venue: 'Under Review'
 authors: '<u>Junha Hyung</u>*, Hyojin Jang*, Jaegul Choo (* equal contribution)'
 header:
