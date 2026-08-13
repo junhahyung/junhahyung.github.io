@@ -5,7 +5,7 @@ layout: onepage
 <div class="section">
   <div class="pub-detail-title">{{ page.title }}</div>
   {% if page.authors %}<div class="pub-authors">{{ page.authors }}</div>{% endif %}
-  <div class="pub-venue">{{ page.venue }}{% unless page.venue == 'arXiv preprint' or page.venue == 'Under Review' %}, {{ page.date | date: "%Y" }}{% endunless %}</div>
+  <div class="pub-venue">{{ page.venue }}{% unless page.venue == 'arXiv preprint' or page.venue == 'Under Review' or page.venue == 'Work in progress' %}, {{ page.date | date: "%Y" }}{% endunless %}</div>
 
   {% if page.links %}
     <div class="pub-links">

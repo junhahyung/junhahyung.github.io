@@ -4,7 +4,7 @@ collection: publications
 category: manuscripts
 permalink: /publication/failure-to-success
 date: 2026-12-01
-venue: 'Under Review'
+venue: 'Work in progress'
 authors: '<u>Junha Hyung</u>*, Hyojin Jang*, Jaegul Choo (* equal contribution)'
 video: /images/papers/f2s.mp4
 header:
